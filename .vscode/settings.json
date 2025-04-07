@@ -1,5 +1,7 @@
 {
     "files.associations": {
+        "*.embeddedhtml": "html",
+        ".fantomasignore": "ignore",
         "typeinfo": "cpp",
         "*.tcc": "cpp",
         "algorithm": "cpp",
@@ -29,7 +31,8 @@
         "cmath": "cpp",
         "numeric": "cpp",
         "thread": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "*.tpp": "cpp"
     },
     "C_Cpp.formatting": "vcFormat"
 }

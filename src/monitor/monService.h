@@ -12,10 +12,6 @@
 
 class MonService : public MessageService {
 public:
-  /**
-   * @brief Construct a new GPSService object
-   *
-   */
   static MonService &getInstance() {
     static MonService instance;
     return instance;
@@ -28,17 +24,22 @@ public:
 private:
   MonService() : MessageService(MonApp, "Mon") {
     commandService = monCommandService_;
+    currentSensorJsonData ="{}"; // Initialize sensor data string
+    running = false;
+    isCreated = false;
+    monMessageId = 0;
   };
   void createSendingTask();
 #if defined(MON_MQTT_ONE_MESSAGE)
-  static void sendingLoopOneMessage(void *);
+  static void sendingLoopOneMessage(void *pvParameters); // Accept parameter
   monOneMessage *createMONPayloadMessage(int number_of_neighbors) ;
 #else
-  static void sendingLoop(void *);
+  static void sendingLoop(void *pvParameters); // Accept parameter
   void createAndSendMessage(uint16_t mcount, RouteNode *);
 #endif
   TaskHandle_t sending_TaskHandle = NULL;
-  bool running = false;
-  bool isCreated = false;
-  size_t monMessageId = 0;
+  bool running;
+  bool isCreated;
+  size_t monMessageId;
+  String currentSensorJsonData; // Added member to store sensor data
 };

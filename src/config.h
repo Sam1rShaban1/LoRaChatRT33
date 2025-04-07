@@ -78,13 +78,13 @@
 #define MAX_CONNECTION_TRY 10
 
 // WiFi credentials
-#define WIFI_SSID "loramesher"
+#define WIFI_SSID "MS"
 // #define WIFI_SSID "testing"
-#define WIFI_PASSWORD "lora1234"
+#define WIFI_PASSWORD "12345678"
 
 // MQTT configuration
 #define MQTT_ENABLED
-#define MQTT_SERVER "192.168.192.1" 
+#define MQTT_SERVER "34.107.117.161" 
 #define MQTT_PORT 1883
 #define MQTT_USERNAME "admin"
 #define MQTT_PASSWORD "public"
@@ -96,7 +96,7 @@
 
 // MQTT_MON configuration
 #define MQTT_MON_ENABLED
-#define MON_SENDING_EVERY 300000 //ms
+#define MON_SENDING_EVERY 20000 //ms
 // #define MON_SENDING_EVERY 10000 //ms (testing)
 
 #if defined(BLUETOOTH_ENABLED)
