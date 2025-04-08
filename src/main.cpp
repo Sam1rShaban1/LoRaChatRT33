@@ -237,7 +237,7 @@ void display_Task(void* pvParameters) {
         if (millis() - lastLineOneUpdate > DISPLAY_LINE_ONE) {
             lastLineOneUpdate = millis();
             bool isConnected = wiFiService.isConnected() || loraMeshService.hasGateway();
-            String lineOne = "LoRaTRUST-  " + String(isConnected ? "CON" : "NC");
+            String lineOne = "LoRa 33-  " + String(isConnected ? "CON" : "NC");
             Screen.changeLineOne(lineOne);
         }
         if (millis() - lastLineTwoUpdate > DISPLAY_LINE_TWO_DELAY) {
@@ -255,6 +255,16 @@ void display_Task(void* pvParameters) {
                 Screen.changeLineThree(lineThree);
         }
 #endif
+
+        if (millis() - lastLineFourUpdate > DISPLAY_LINE_FOUR_DELAY) {
+            lastLineFourUpdate = millis();
+            String lineFour; // = "RoutingTable:  ";
+            String rt = loraMeshService.getRoutingTable();
+            if (1)
+                lineFour += rt;
+            Screen.changeLineFour(lineFour);
+        }
+
         Screen.drawDisplay();
         vTaskDelay(DISPLAY_TASK_DELAY / portTICK_PERIOD_MS);
     }

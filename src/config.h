@@ -90,13 +90,13 @@
 #define MQTT_PASSWORD "public"
 #define MQTT_TOPIC_SUB "from-server/"
 #define MQTT_TOPIC_OUT "to-server/"
-#define MQTT_MAX_PACKET_SIZE 512 // 128, 256 or 512
+#define MQTT_MAX_PACKET_SIZE 2048 // 128, 256 or 512
 #define MQTT_MAX_QUEUE_SIZE 10
 #define MQTT_STILL_CONNECTED_INTERVAL 300000 // In milliseconds, 0 to disable
 
 // MQTT_MON configuration
 #define MQTT_MON_ENABLED
-#define MON_SENDING_EVERY 20000 //ms
+#define MON_SENDING_EVERY 10000 //ms
 // #define MON_SENDING_EVERY 10000 //ms (testing)
 
 #if defined(BLUETOOTH_ENABLED)

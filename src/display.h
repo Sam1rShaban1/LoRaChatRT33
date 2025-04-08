@@ -37,7 +37,7 @@ private:
 
     void changeLine(String str, int pos, int& x, int& minX, int size, bool& move);
 
-    String displayText[6] = {"LoRaTRUST", "", "", "", "", ""};
+    String displayText[6] = {"LoRa 33", "", "", "", "", ""};
 
     String routingText[25];
     int routingSize = 0;
