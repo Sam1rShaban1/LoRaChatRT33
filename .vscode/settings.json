@@ -34,5 +34,6 @@
         "utility": "cpp",
         "*.tpp": "cpp"
     },
-    "C_Cpp.formatting": "vcFormat"
+    "C_Cpp.formatting": "vcFormat",
+    "FSharp.suggestGitignore": false
 }
