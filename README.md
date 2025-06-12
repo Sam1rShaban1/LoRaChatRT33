@@ -127,8 +127,7 @@ See the [LICENSE](LICENSE) file for details.
 ## 🙏 Acknowledgments
 - Based on the original [LoRaChat](https://github.com/Jaimi5/LoRaChat) project
 - Thanks to the LoRaMesher team for the mesh networking protocol
-- TTGO T-BEAM hardware team
-- Arduino team for the Nano 33 BLE Sense support
+- Max van Der Stoel Institute for providing the hardware
 
 ## ❗ Troubleshooting
 Common issues and their solutions:
